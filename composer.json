@@ -1,0 +1,16 @@
+{
+    "name": "hieupv/nf-wordpress",
+    "description": "Create Wordpress plugin easier",
+    "authors": [{
+        "name": "hieupv",
+        "email": "hieupv.est@gmail.com"
+    }],
+    "autoload": {
+        "psr-4": {
+            "NFWP\\": "src/"
+        }
+    },
+    "require": {
+        "philo/laravel-blade": "^3.1"
+    }
+}
