@@ -2,6 +2,7 @@
 
 namespace NFWP\Admin;
 
+use Exception;
 use NFWP\Support\AdminMenuOption;
 use Philo\Blade\Blade;
 
