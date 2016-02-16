@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7630092b614894200956cfa5601b59ff",
-    "content-hash": "7eec33afcfcecb7d19c5f390b22392b0",
+    "hash": "f44c22783745abe440c4742edbc8ef8f",
+    "content-hash": "379584be4c0d346bb8505343aab0c1a4",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -358,6 +358,45 @@
             "time": "2016-01-07 13:30:59"
         },
         {
+            "name": "nf/query-builder",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/hieu-pv/QueryBuilder.git",
+                "reference": "e9cb9c42f28edc2c0f42b391099dec2e733efffa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/hieu-pv/QueryBuilder/zipball/e9cb9c42f28edc2c0f42b391099dec2e733efffa",
+                "reference": "e9cb9c42f28edc2c0f42b391099dec2e733efffa",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NFQueryBuilder\\": "NFQueryBuilder/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "hieupv",
+                    "email": "hieupv.est@gmail.com"
+                }
+            ],
+            "description": "Build complex SQL query easier",
+            "keywords": [
+                "builder",
+                "query",
+                "query builder",
+                "sql"
+            ],
+            "time": "2016-01-01 17:10:51"
+        },
+        {
             "name": "philo/laravel-blade",
             "version": "v3.1",
             "source": {
@@ -451,7 +490,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "nf/query-builder": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

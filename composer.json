@@ -1,5 +1,5 @@
 {
-    "name": "hieupv/nf-wordpress",
+    "name": "nf/nf-wordpress",
     "description": "Create Wordpress plugin easier",
     "authors": [{
         "name": "hieupv",
@@ -11,6 +11,7 @@
         }
     },
     "require": {
-        "philo/laravel-blade": "^3.1"
+        "philo/laravel-blade": "^3.1",
+        "nf/query-builder": "dev-master"
     }
 }
