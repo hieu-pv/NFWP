@@ -36,9 +36,6 @@ class NFDatabase
         if (method_exists($this, 'up')) {
             register_activation_hook(PLUGIN_FILE, [$this, 'up']);
         }
-        if (method_exists($this, 'down')) {
-            register_uninstall_hook(PLUGIN_FILE, [$this, 'down']);
-        }
     }
 
     /**
