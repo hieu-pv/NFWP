@@ -2,6 +2,8 @@
 
 namespace NFWP\Helpers;
 
+use Philo\Blade\Blade;
+
 class View
 {
     public function __construct()
