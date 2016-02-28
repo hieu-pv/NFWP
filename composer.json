@@ -5,12 +5,14 @@
         "name": "hieupv",
         "email": "hieupv.est@gmail.com"
     }],
+    "version": "1.0.0",
     "autoload": {
         "psr-4": {
             "NFWP\\": "src/"
         }
     },
     "require": {
+        "illuminate/database": "^5.2",
         "philo/laravel-blade": "^3.1"
     }
 }
