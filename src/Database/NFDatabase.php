@@ -15,7 +15,7 @@ class NFDatabase
      */
     private $capsule;
 
-    public function __construct()
+    public function __construct($plugin_file)
     {
 
         $this->capsule = new Capsule;
@@ -34,7 +34,10 @@ class NFDatabase
         $this->capsule->setAsGlobal();
 
         if (method_exists($this, 'up')) {
-            register_activation_hook(PLUGIN_FILE, [$this, 'up']);
+            register_activation_hook($plugin_file, [$this, 'up']);
+        }
+        if (method_exists($this, 'down')) {
+            register_uninstall_hook($plugin_file, [$this, 'down']);
         }
     }
 
