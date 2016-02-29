@@ -17,6 +17,13 @@ class NFUser extends WP_User
     public $where = [];
 
     /**
+     * aggregate of user data key
+     *
+     * @var Array
+     */
+    public $user_data_key = ['ID', 'user_pass', 'user_login', 'user_nicename', 'user_url', 'user_email', 'display_name', 'nickname', 'first_name', 'last_name', 'description', 'rich_editing', 'user_registered', 'role', 'jabber', 'aim', 'yim', 'show_admin_bar_front'];
+
+    /**
      * aggreate of all operators which can be accepted
      *
      * @var Array
@@ -109,6 +116,47 @@ class NFUser extends WP_User
             }
         }
         return $users;
+    }
+
+    /**
+     * Get user meta data
+     *
+     * @var String $key, Boolean $single
+     */
+    public function getMetaData($key = '', $single = false)
+    {
+        $data = get_user_meta($this->ID, $key, $single);
+    }
+
+    /**
+     * Update user meta data
+     *
+     * @var $key, $value
+     */
+    public function setMetaData($key, $value)
+    {
+        update_user_meta($this->ID, $key, $value);
+    }
+
+    /**
+     * Delete user meta data
+     *
+     * @var $key
+     */
+    public function deleteMetaData($key)
+    {
+        delete_user_meta($this->ID, $key);
+    }
+
+    /**
+     * update user meta data
+     *
+     * @var $key, $value
+     * @return mixed
+     */
+    public function save()
+    {
+        wp_update_user($this);
     }
 
     public function first()
