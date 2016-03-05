@@ -45,6 +45,6 @@ class NFEmail
      */
     public function send()
     {
-        return wp_mail($this->$to, $this->$subject, $this->$message, $this->$headers, $this->$attachments);
+        return wp_mail($this->to, $this->subject, $this->message, $this->headers, $this->attachments);
     }
 }

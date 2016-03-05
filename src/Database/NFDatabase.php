@@ -15,7 +15,7 @@ class NFDatabase
      */
     private $capsule;
 
-    public function __construct($plugin_file)
+    public function __construct($plugin_file = __FILE__)
     {
 
         $this->capsule = new Capsule;
