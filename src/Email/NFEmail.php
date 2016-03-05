@@ -1,6 +1,6 @@
 <?php
 
-namespace Email;
+namespace NFWP\Email;
 
 class NFEmail
 {
