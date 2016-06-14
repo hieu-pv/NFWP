@@ -126,6 +126,17 @@ class NFUser extends WP_User
     public function getMetaData($key = '', $single = false)
     {
         $data = get_user_meta($this->ID, $key, $single);
+        return $data;
+    }
+
+    /**
+     * Add user meta data
+     *
+     * @var $key, $value
+     */
+    public function setMetaData($key, $value)
+    {
+        return add_user_meta($this->ID, $key, $value);
     }
 
     /**
@@ -133,9 +144,9 @@ class NFUser extends WP_User
      *
      * @var $key, $value
      */
-    public function setMetaData($key, $value)
+    public function updateMetaData($key, $value)
     {
-        update_user_meta($this->ID, $key, $value);
+        return update_user_meta($this->ID, $key, $value);
     }
 
     /**
@@ -145,7 +156,7 @@ class NFUser extends WP_User
      */
     public function deleteMetaData($key)
     {
-        delete_user_meta($this->ID, $key);
+        return delete_user_meta($this->ID, $key);
     }
 
     /**
