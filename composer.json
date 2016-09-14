@@ -5,7 +5,7 @@
         "name": "hieupv",
         "email": "hieupv.est@gmail.com"
     }],
-    "version": "v1.2",
+    "version": "v2.1",
     "license": "MIT",
     "autoload": {
         "psr-4": {
