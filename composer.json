@@ -10,10 +10,13 @@
     "autoload": {
         "psr-4": {
             "NFWP\\": "src/"
-        }
+        },
+        "files": ["helpers/helpers.php"]
     },
     "require": {
-        "illuminate/database": "^5.2",
-        "philo/laravel-blade": "^3.1"
+        "monolog/monolog": "^1.21",
+        "philo/laravel-blade": "^3.1",
+        "illuminate/database": "^5.3",
+        "symfony/http-foundation": "^3.1"
     }
 }

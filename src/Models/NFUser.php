@@ -2,7 +2,7 @@
 
 namespace NFWP\Models;
 
-require __DIR__ . '/../../../../../../../../wp-includes/pluggable.php';
+require ABSPATH . '/wp-includes/pluggable.php';
 
 use WP_User;
 

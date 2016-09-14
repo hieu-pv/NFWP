@@ -2,16 +2,6 @@
 
 namespace NFWP\PageTemplate;
 
-use Philo\Blade\Blade;
-
-/*
-Plugin Name: Page Template Plugin : 'Good To Be Bad'
-Plugin URI: http://hbt.io/
-Version: 1.0.1
-Author: Harri Bell-Thomas
-Author URI: http://hbt.io/
- */
-
 class NFPageTemplate
 {
 
@@ -31,9 +21,6 @@ class NFPageTemplate
     public function __construct()
     {
         add_action('plugins_loaded', array($this, 'get_instance'));
-        $views       = $this->view;
-        $cache       = $this->cache;
-        $this->blade = new Blade($views, $cache);
     }
 
     public function get_instance()
@@ -104,14 +91,4 @@ class NFPageTemplate
 
         return $this->view();
     }
-
-    public function render($view, $data = [])
-    {
-        if (is_array($data)) {
-            echo $this->blade->view()->make($view, $data)->render();
-        } else {
-            throw new Exception("data pass into view must be an array", 0);
-        }
-    }
-
 }

@@ -3,15 +3,13 @@
 namespace NFWP\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use NFWP\Database\NFDatabase;
+use NFWP\Database\DBManager;
 
 class NFModel extends Model
 {
     public function __construct()
     {
-        parent::__construct();
-        $database = new NFDatabase();
-        $capsule  = $database->getCapsule();
-        $capsule->bootEloquent();
+        $manager = DBManager::getInstance();
+        $manager->bootEloquent();
     }
 }
