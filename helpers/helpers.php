@@ -1,6 +1,6 @@
 <?php
 
-use Symfony\Component\HttpFoundation\Request;
+use Illuminate\Http\Request;
 
 function view($view, $data = [])
 {
@@ -17,5 +17,5 @@ function nflog()
 
 function request()
 {
-    return Request::createFromGlobals();
+    return Request::capture();
 }

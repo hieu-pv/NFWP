@@ -21,7 +21,7 @@ class NFShortCode
          *
          * @var array
          */
-        $ignore = ['__construct', 'render'];
+        $ignore = ['__construct'];
 
         foreach ($ignore as $method) {
             if (in_array($method, $methods)) {
@@ -36,19 +36,6 @@ class NFShortCode
          */
         foreach ($methods as $shortcode) {
             add_shortcode($shortcode, [$this, $shortcode]);
-        }
-
-        $views       = isset($this->view) ? $this->view : __DIR__ . '/Resources/Views';
-        $cache       = isset($this->cache) ? $this->cache : __DIR__ . '/Resources/Cache';
-        $this->blade = new Blade($views, $cache);
-    }
-
-    public function render($view, $data = [])
-    {
-        if (is_array($data)) {
-            echo $this->blade->view()->make($view, $data)->render();
-        } else {
-            throw new Exception("data pass into view must be an array", 0);
         }
     }
 }

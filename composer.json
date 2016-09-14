@@ -17,6 +17,6 @@
         "monolog/monolog": "^1.21",
         "philo/laravel-blade": "^3.1",
         "illuminate/database": "^5.3",
-        "symfony/http-foundation": "^3.1"
+        "illuminate/http": "^5.3"
     }
 }
