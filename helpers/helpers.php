@@ -2,11 +2,21 @@
 
 use Illuminate\Http\Request;
 
-function view($view, $data = [])
+function view($view, $data = [], $viewPath = null)
 {
     $nfview = \NFWP\View\NFView::getInstance();
-    $nfview->setViewPath(get_stylesheet_directory() . '/resources/views');
-    $nfview->setCachePath(get_stylesheet_directory() . '/resources/cache');
+    if (isset($viewPath) && file_exists($viewPath)) {
+        $nfview->setViewPath($viewPath);
+    } else {
+        $nfview->setViewPath(get_stylesheet_directory() . '/resources/views');
+    }
+    if (!isset($cachePath)) {
+        $cachePath = $viewPath . '/../cache';
+    }
+    if (!file_exists($cachePath)) {
+        mkdir($cachePath, '0755', true);
+    }
+    $nfview->setCachePath($cachePath);
     return $nfview->render($view, $data);
 }
 
