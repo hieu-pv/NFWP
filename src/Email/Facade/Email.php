@@ -59,7 +59,7 @@ class Email
                 if (!is_callable($args[3])) {
                     throw new Exception("The fourth parameter must be a closure", 1);
                 } else {
-                    $viewPath = $args[3];
+                    $callable = $args[3];
                 }
                 break;
             default:
