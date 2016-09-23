@@ -4,7 +4,7 @@ namespace NFWP\Database;
 
 class NFDatabase
 {
-    public function __construct()
+    public function __construct($plugin_file = __FILE__)
     {
         $manager = DBManager::getInstance();
         $manager->bootEloquent();

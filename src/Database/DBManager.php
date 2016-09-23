@@ -20,7 +20,7 @@ class DBManager
      */
     public static $instance;
 
-    private function __construct($plugin_file = __FILE__)
+    private function __construct()
     {
 
         $this->capsule = new Capsule;
