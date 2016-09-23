@@ -52,14 +52,14 @@ class Email
                     $data = $args[1];
                 }
                 if (!file_exists($args[2])) {
-                    throw new Exception("The third parameter must be a callable", 1);
+                    throw new Exception("The third parameter must be a directory", 1);
                 } else {
-                    $callable = $args[3];
+                    $viewPath = $args[2];
                 }
-                if (!is_callable($args[4])) {
-                    throw new Exception("The fourth parameter must be a directory", 1);
+                if (!is_callable($args[3])) {
+                    throw new Exception("The fourth parameter must be a closure", 1);
                 } else {
-                    $viewPath = $args[4];
+                    $viewPath = $args[3];
                 }
                 break;
             default:
