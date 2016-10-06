@@ -1,6 +1,6 @@
 <?php
 
-namespace NFWP\Email\Facade;
+namespace NFWP\Mail\Facade;
 
 use Exception;
 use NFWP\Mail\Mail as NFMail;
