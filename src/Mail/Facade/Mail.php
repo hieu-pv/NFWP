@@ -3,9 +3,9 @@
 namespace NFWP\Email\Facade;
 
 use Exception;
-use NFWP\Email\Email as NFEmail;
+use NFWP\Mail\Mail as NFMail;
 
-class Email
+class Mail
 {
     public static function send()
     {
@@ -66,7 +66,7 @@ class Email
                 throw new Exception("Too many parameters for this operator function", 1);
         }
         $content = view($view, $data, $viewPath);
-        $email   = new NFEmail($content);
+        $email   = new NFMail($content);
         call_user_func($callable, $email);
         return $email->send();
     }

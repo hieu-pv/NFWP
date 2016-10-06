@@ -1,12 +1,12 @@
 <?php
 
-namespace NFWP\Email;
+namespace NFWP\Mail;
 
 include_once ABSPATH . '/wp-includes/pluggable.php';
 
 use Exception;
 
-class Email
+class Mail
 {
     /**
      * Array or comma-separated list of email addresses to send message.

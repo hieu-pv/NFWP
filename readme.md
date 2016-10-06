@@ -1,2 +1,1 @@
-v2.1 released
-fix request helper function
+v2.3
