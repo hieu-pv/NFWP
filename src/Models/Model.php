@@ -2,10 +2,10 @@
 
 namespace NFWP\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model as EloquentModel;
 use NFWP\Database\DBManager;
 
-class NFModel extends Model
+class Model extends EloquentModel
 {
     public function __construct()
     {
