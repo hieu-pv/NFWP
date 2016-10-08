@@ -15,7 +15,7 @@ trait HasAttachment
     public function getThePostThumbnail($size = 'thumbnail', $attr = '')
     {
         if ($this->thumbnail->first()->guid) {
-            return get_the_post_thumbnail(new WP_Post((object) $this->getAttributes()), $size, $attr);
+            return get_the_post_thumbnail((object) $this->getAttributes(), $size, $attr);
         } else {
             return "<img src=\"{$this->getDefaultAttachment()}\" class=\"nf-default-thumbnail\"/>";
         }
@@ -24,9 +24,9 @@ trait HasAttachment
     {
         if ($this->defaultAttachment) {
             if (is_int($this->defaultAttachment)) {
-                $this->findOrFail($this->defaultAttacment)->guid;
+                $this->findOrFail($this->defaultAttachment)->guid;
             } else {
-                return $this->defaultAttacment;
+                return $this->defaultAttachment;
             }
         } else {
             return '';
