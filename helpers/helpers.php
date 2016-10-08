@@ -1,6 +1,8 @@
 <?php
 
-use Illuminate\Http\Request;
+global $wpdb;
+
+define('NFWP_DB_TABLE_PREFIX', $wpdb->prefix);
 
 function view($view, $data = [], $viewPath = null)
 {
@@ -27,5 +29,5 @@ function nflog()
 
 function request()
 {
-    return Request::capture();
+    return \Illuminate\Http\Request::capture();
 }
