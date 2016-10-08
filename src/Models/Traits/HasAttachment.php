@@ -1,6 +1,11 @@
 <?php
+
+namespace NFWP\Models\Traits;
+
 trait HasAttachment
 {
+    public $defaultImage = '';
+    
     public function thumbnail()
     {
         return $this->belongsToMany(self::class, NFWP_DB_TABLE_PREFIX . 'postmeta', 'post_id', 'meta_value')->wherePivot('meta_key', '_thumbnail_id');
