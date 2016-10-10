@@ -10,7 +10,7 @@ trait HasAttachment
     }
     public function getThumbnail()
     {
-        return $this->thumbnail->first()->guid ? $this->thumbnail->first()->guid : $this->getDefaultAttachment();
+        return $this->thumbnail->first()->guid ? $this->thumbnail->first()->guid : $this->defaultThumbnail;
     }
     public function getThePostThumbnail($size = 'thumbnail', $attr = '')
     {
